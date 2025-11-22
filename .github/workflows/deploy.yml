@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - ea-5168
   pull_request:
     branches:
       - main   
@@ -36,4 +37,4 @@ jobs:
       
       - name: Upload files to s3
         run:  |
-          aws s3 cp. s3://mybuck3t0942/ --recursive 
+          aws s3 cp . s3://mybuck3t0942/ --recursive 
