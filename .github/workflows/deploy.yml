@@ -38,3 +38,9 @@ jobs:
       - name: Upload files to s3
         run:  |
           aws s3 cp . s3://mybuck3t0942/ --recursive 
+
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: EE3ED6XUD8HU0
+          PATHS: "/*"
